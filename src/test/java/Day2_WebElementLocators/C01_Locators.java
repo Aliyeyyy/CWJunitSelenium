@@ -94,12 +94,31 @@ public class C01_Locators {
         forgotPwd.click();
 
 
+
+    }
+
+    @Test
+    public void partialLinkTextLocator(){
+        // link text -> "Forgot password?"
+
+        WebElement forgotPwd = driver.findElement(By.partialLinkText("Forgot"));
+        forgotPwd.click();
+
     }
         @Test
         public void absoluteXpath(){
         WebElement email = driver.findElement(By.xpath("/html/body/main/section[1]/div/form/section/div[2]/div[1]/input"));
 
         email.sendKeys("Aliye Aferin kız");
+        }
+
+    @Test
+    public void relativeXpath(){
+        // xpath locator -> //input[@name='session_key']
+
+        WebElement email = driver.findElement(By.xpath("//input[@name='session_key']"));
+        email.sendKeys("Aliye rAferin kız");
+
         }
     }
 
