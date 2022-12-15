@@ -27,7 +27,7 @@ public class C01_Locators {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         //LinkedIn sitesine gidildi
-        driver.get("https://www.linkedin.com/");
+        driver.get("https://www.linkedin.com/login/tr?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin");
 
         // driver imiz maximize edildi
         driver.manage().window().maximize();
@@ -47,7 +47,7 @@ public class C01_Locators {
     public void idLocator(){
         // id Locator -> "session_key"
 
-        WebElement email = driver.findElement(By.id("session_key"));
+        WebElement email = driver.findElement(By.id("email-or-phone"));
         email.sendKeys("Clarusway selenium dersinden selamlar");
 
     }
@@ -56,7 +56,7 @@ public class C01_Locators {
     public void nameLocator(){
         // name locator -> "session_password"
 
-        WebElement password = driver.findElement(By.name("session_password"));
+        WebElement password = driver.findElement(By.name("password"));
 
         password.sendKeys("Sifre");
     }
@@ -80,7 +80,7 @@ public class C01_Locators {
 
 
         // 2. elementimiz email text alanimiz. Bu yuzden bu elemani email degiskenine assign ettik.
-        WebElement email = emailList.get(1);
+        WebElement email = emailList.get(2);
 
         email.sendKeys("Tag locator test");
 
@@ -90,7 +90,7 @@ public class C01_Locators {
     public void linkTextLocator() {
         // link text -> "Forgot password?"
 
-        WebElement forgotPwd = driver.findElement(By.linkText("Forgot password?"));
+        WebElement forgotPwd = driver.findElement(By.linkText("Şifrenizi mi unuttunuz?"));
         forgotPwd.click();
 
 
@@ -101,7 +101,7 @@ public class C01_Locators {
     public void partialLinkTextLocator(){
         // link text -> "Forgot password?"
 
-        WebElement forgotPwd = driver.findElement(By.partialLinkText("Forgot"));
+        WebElement forgotPwd = driver.findElement(By.partialLinkText("Şifrenizi"));
         forgotPwd.click();
 
     }
@@ -116,7 +116,7 @@ public class C01_Locators {
     public void relativeXpath(){
         // xpath locator -> //input[@name='session_key']
 
-        WebElement email = driver.findElement(By.xpath("//input[@name='session_key']"));
+        WebElement email = driver.findElement(By.xpath("//*[@id=\"username\"]"));
         email.sendKeys("Aliye rAferin kız");
 
         }
