@@ -113,12 +113,16 @@ public class C01_Locators {
         }
 
     @Test
-    public void relativeXpath(){
+    public void relativeXpath() {
         // xpath locator -> //input[@name='session_key']
 
         WebElement email = driver.findElement(By.xpath("//*[@id=\"username\"]"));
         email.sendKeys("Aliye rAferin kız");
 
-        }
     }
+
+
+        }
+
+
 
