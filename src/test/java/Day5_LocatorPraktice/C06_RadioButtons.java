@@ -15,11 +15,11 @@ import java.time.Duration;
 public class C06_RadioButtons {
 
 
-        //    Go to URL:  https://www.facebook.com/
-//    Click on Create an Account button.
-//    Click 'Kadin'
-//    Click 'Erkek'
-//      Validate 'Kadin' is not selected and 'Erkek' is selected.
+         //    Go to URL:  https://www.facebook.com/
+        //    Click on Create an Account button.
+        //    Click 'Kadin'
+        //    Click 'Erkek'
+       //      Validate 'Kadin' is not selected and 'Erkek' is selected.
 
         WebDriver driver;
 
