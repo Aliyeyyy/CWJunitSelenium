@@ -1,19 +1,18 @@
-package Day6_Dropdown_SeleniumWaits;
+package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C03_Alerts {
+public abstract class BaseTest {
 
-    WebDriver driver;
+    //    Abstract yaparak TestBase Class'ından obje oluşturulmasının önüne geçeriz.
+    //    TestBase Class'ı sadece extends ile inherit ederek kullanacağız. Dolayısıyla oluşturduğumuz driver variable'i için protected access modifier seçiyoruz.
+    protected WebDriver driver;
 
     @Before
     public void setup(){
@@ -27,26 +26,7 @@ public class C03_Alerts {
     @After
     public void tearDown(){
         // test sonrasinda driver kapatmak (varsa raporlari dosyalamak) icin kullanilir.
-       // driver.quit();
-    }
-
-
-
-    @Test
-    public void alerts() throws InterruptedException {
-        driver.get("https://demo.guru99.com/test/delete_customer.php");
-
-
-        WebElement idInput = driver.findElement(By.name("cusid"));
-        idInput.sendKeys("123");
-
-        driver.findElement(By.name("submit")).click();
-
-        Thread.sleep(4000);
-        driver.switchTo().alert().accept();
-
-
-
+        //driver.quit();
 
     }
 }
