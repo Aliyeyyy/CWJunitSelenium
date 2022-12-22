@@ -22,7 +22,7 @@ public class C02_IframeExample {
         //Driver ile ilgili her turlu initial(baslangic) islemi burada yapilir
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.manage().window().maximize();
     }
 
@@ -43,16 +43,18 @@ public class C02_IframeExample {
 
     @Test
     public void iframeExample (){
+        // https://www.jqueryscript.net/demo/Easy-iFrame-based-Twitter-Emoji-Picker-Plugin-jQuery-Emoojis/ sitesine gidiniz.
         driver.get("https://www.jqueryscript.net/demo/Easy-iFrame-based-Twitter-Emoji-Picker-Plugin-jQuery-Emoojis/");
+      // Web sitesini maximize yapınız.
+      // İkinci emojiye tıklayınız.
+        driver.switchTo().frame("emoojis");
 
-        driver.switchTo().frame("emojis");
-
-        // İkinci emojiye tıklayınız
+        // Tüm ikinci emoji öğelerine tıklayınız.
         WebElement secondEmojiTab = driver.findElement(By.xpath("//a[contains(@href,'nature')]"));
         secondEmojiTab.click();
 
-        // Tüm ikinci emoji öğelerine tıklayınız.
         List<WebElement> emojilist = driver.findElements(By.xpath("//div[@id='nature']//img"));
+
 
         emojilist.forEach(WebElement::click); // her bir img elementine tıklanıyor
 

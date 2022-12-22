@@ -40,6 +40,8 @@ public class C03_WindowHandles extends BaseTest {
 
         links.get(0).click();
         links.get(1).click();
+        links.get(2).click();
+        links.get(3).click();
 
 
         //Iterate etmek icin (gezinmek icin) tum tab ve window id lerini bir set icinde sakliyoruz

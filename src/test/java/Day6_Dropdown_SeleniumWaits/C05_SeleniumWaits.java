@@ -1,4 +1,4 @@
-package Day7_Iframe_WindowHandles;
+package Day6_Dropdown_SeleniumWaits;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
