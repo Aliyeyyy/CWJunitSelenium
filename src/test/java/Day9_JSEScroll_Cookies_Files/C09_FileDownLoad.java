@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 public class C09_FileDownLoad extends BaseTest {
 
     @Test
-    public void fileDowland(){
+    public void fileDowland() throws InterruptedException {
         driver.get("https://opensource-demo.orangehrmlive.com/");
         //Sisteme giriş yapıyoruz
         WebElement username = driver.findElement(By.name("username"));

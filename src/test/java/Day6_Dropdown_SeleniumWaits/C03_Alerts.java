@@ -27,7 +27,7 @@ public class C03_Alerts {
     @After
     public void tearDown(){
         // test sonrasinda driver kapatmak (varsa raporlari dosyalamak) icin kullanilir.
-       // driver.quit();
+        driver.quit();
     }
 
 
@@ -48,5 +48,11 @@ public class C03_Alerts {
 
 
 
+
+
+
+
     }
+
+
 }
